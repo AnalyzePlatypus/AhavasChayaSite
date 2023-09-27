@@ -1,23 +1,23 @@
 [
 	{
 		"label": "About",
-		"url": "/#about",
+		"url": "/about",
 		"cssClasses": "ml-auto hidden sm:inline-block"
 	},
 	{
 		"label": "Contact",
-		"url": "/#contact",
+		"url": "/contact",
 		"cssClasses": "hidden sm:inline-block"
 	},
 	{
-		"label": "Start Free Trial",
-		"shortLabel": "Try Free",
-		"url": "/#cta",
-		"cssClasses": "hidden sm:block button primary medium"
+		"label": "Apply",
+		"url": "/apply",
+		"cssClasses": "hidden sm:inline-block"
 	},
 	{
-		"label": "Try ›",
-		"url": "/#cta",
-		"cssClasses": "sm:hidden button primary small"
+		"label": "Donate",
+		"shortLabel": "Donate",
+		"url": "/donate",
+		"cssClasses": "sm:block button primary small sm:medium"
 	}
 ]

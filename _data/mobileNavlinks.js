@@ -1,30 +1,30 @@
 module.exports = [
 	{
 		"label": "About",
-		"url": "/#about",
+		"url": "/about",
 		"cssClasses": ""
 	},
 	{
-		"label": "Learn more",
-		"url": "/#learn-more",
+		"label": "FAQ",
+		"url": "/#faq",
 		"cssClasses": ""
 	},
 	{
 		"label": "Contact",
-		"url": "/#Contact",
-		"cssClasses": "border-opacity-0"
+		"url": "/contact",
+		"cssClasses": "border-none"
 	},
 	{
-		"label": "Start Free Trial",
-		"openInNewTab": true,
-		"url": "#",
-		"cssClasses": "button primary large w-full text-center mb-3 mt-3"
-	},
-	{
-		"label": "Log in",
-		"url": "#",
+		"label": "Apply online",
+		"url": "/apply",
 		"cssClasses": "button tertiary large w-full text-center mb-2 border-b-2"
 	}, 
+	{
+		"label": "Donate today",
+		"openInNewTab": false,
+		"url": "/donate",
+		"cssClasses": "button primary large w-full text-center mb-3 mt-3"
+	},
 ].map(item => {
 	return {
 		...item,

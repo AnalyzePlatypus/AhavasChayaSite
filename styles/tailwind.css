@@ -129,7 +129,7 @@ html {
 @layer components {
 
   .button {
-    @apply inline-block rounded-full border-2 border-transparent font-semibold cursor-pointer disabled:opacity-30 disabled:cursor-default hover:underline;
+    @apply inline-block relative rounded-sm border-2 border-transparent font-semibold cursor-pointer disabled:opacity-30 disabled:cursor-default uppercase tracking-wide;
     /* hover:underline hover:decoration-2 disabled:hover:no-underline;  */
   }
   
@@ -146,11 +146,15 @@ html {
   }
   
   .button.primary {
-    @apply bg-black text-white bg-opacity-80 hover:bg-opacity-100 disabled:hover:bg-opacity-80;
+    @apply bg-black text-white bg-opacity-95 hover:bg-opacity-100 disabled:hover:bg-opacity-80;
+  }
+  
+  .button.primary::after {
+    background-color: #fff;
   }
   
   .button.secondary {
-    @apply bg-black text-black bg-opacity-5 hover:bg-opacity-10 disabled:hover:bg-opacity-10;
+    @apply text-black border-black border-2 bg-white hover:bg-opacity-10 disabled:hover:bg-opacity-10;
   }
   
   .button.tertiary {
@@ -170,6 +174,34 @@ html {
     @apply border-white border-opacity-20 hover:border-opacity-30 disabled:hover:border-opacity-10;
   }
   
+  /* Button FX */
+  
+  a {
+    position: relative;
+  }
+  
+  a::after,
+  .button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  a:hover::after,
+  .button:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  
+  
   .center-transform-all {
     position: absolute;
     top: 50%;
@@ -183,5 +215,6 @@ html {
     left: none;
     transform: none;
   }
+  
 }
 

@@ -1,6 +1,7 @@
 module.exports = {
-	title: "11ty Starter",
+	title: "Ahavas Chaya",
 	description: "I started a site! It's gonna be awesome!",
+	rootUrl: "https://127.0.0.1:8080",
 	url: "https://127.0.0.1:8080",
 	imagePath: "127.0.0.1:8080/open-graph.jpg",
 	imageWidth: "1200",

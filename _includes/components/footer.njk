@@ -19,7 +19,7 @@
 						<h2 class="font-bold text-lg pb-2">{{ group.title }}</h2>
 						<ul>
 							{% for link in group.links %}
-								<li class='flex items-center w-full transition-all rounded-md hover:underline'>
+								<li class='flex items-center w-full transition-all rounded-md'>
 									<a href="{{ link.url }}"  {% if link.openInNewTab %} noopener target='_blank' {% endif %} class="{% if not link.badge %}  w-full {% endif %} py-2 sm:py-1">{{ link.title}}</a>
 									{% if link.badge %}
 										<div>

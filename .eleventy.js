@@ -25,7 +25,8 @@ const { renderSection: sectionShortcode }  = require('./section.js');
 const numberOfWordsToJoin = 5
 const maxLength = 10
 
-const FATHOM_IDS = require('./_data/fathomIds')
+const FATHOM_IDS = require('./_data/fathomIds');
+const SEO = require('./_data/seo');
 
 // Custom plugins
 
@@ -123,7 +124,7 @@ module.exports = function (eleventyConfig) {
     sitemap: {
       // Options for SitemapStream. See https://github.com/ekalinin/sitemap.js/blob/master/api.md#sitemapstream
       // Hostname is needed when the URLs of the items don't include it.
-      hostname: "https://gurumedia.com",
+      hostname: SEO.rootUrl,
     },
   });
   

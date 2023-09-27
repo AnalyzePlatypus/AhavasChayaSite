@@ -1,3 +1,6 @@
+---
+eleventyExcludeFromCollections: true
+---
 # Fonts
 
 1. Select a Google Font

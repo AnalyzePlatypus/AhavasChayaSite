@@ -1,5 +1,5 @@
-# razorUX Eleventy Starter
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/AnalyzePlatypus/razorux-eleventy-starter)
+# Ahavas Chaya Site
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a019aca2-0ed7-4aeb-9cec-81cdb983677a/deploy-status)](https://app.netlify.com/sites/ahavaschaya/deploys)
 
 My personal starter for [Eleventy](https://www.11ty.dev) sites.
 
@@ -50,7 +50,7 @@ My personal starter for [Eleventy](https://www.11ty.dev) sites.
 
 
 ## To-do
-- [ ] Update `site.webmanifest` from `seo.json`
+- [ ] Update `manifest.json` from `seo.json`
 - [ ] Fix footer
 - [ ] Fix JSON-LD for FAQs (diy's in the front matter of `index.njk`)
 
@@ -70,12 +70,12 @@ My personal starter for [Eleventy](https://www.11ty.dev) sites.
 - [x] Mailing list signup
 - [x] Mobile Menu toggle
 - [x] Mobile Menu
-- [ ] Section background images
+- [x] Section background images
 - [ ] Navbar dropdown
 - [ ] Navbar mega dropdown
 - [ ] Slider with lightbox
 - [ ] Gallery
-- [ ] Logo Cloud
+- [x] Logo Cloud
 - [ ] Testimonial cloud
 - [ ] Contact Us
 - [ ] Contact Form
@@ -108,6 +108,38 @@ Then update `styles/tailwind.config.js` to use the new font.
 To add a [canonical URL](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) to a blog post, add the `canonicalUrl` property to your front matter.
 
 
+## Shortcodes
+
+### Embed an SVG
+
+```
+{{ '/images/backgrounds/Background Ellipse 1.svg' | svgContents(".css_classes") | safe }}
+```
+
+### Embed an Icon
+
+```
+	{{ '/phosphor-icons/regular/caret-left.svg' | svgContents("icon-lg") | safe }}
+```
+
+### Embed a responsive image
+
+```
+	{% image {src: partner.imagePath, alt: partner.imageDescription, widths: [600, 320, 300, 160], cssSizes: '(max-width: 639px) 160px, 300px', cssClass: ''} %}
+```
+
+### Other
+
+## Logo SVG Viewbox
+
+For some reason, the SVG logos have huge amounts of padding.
+This can be fixed by manually changing the `viewBox` attribute on the `svg` element to this value:
+
+```svg
+viewBox="520 650 2030 560"
+```
+
+
 ## Thank You
 
 * Original theme by [Greg Wolanski](https://gregwolanski.com)
@@ -115,6 +147,7 @@ To add a [canonical URL](https://developers.google.com/search/docs/crawling-inde
 
 ## License
 
-MIT
+This repository is property of Ahavas Chaya Inc.
+All rights reserved.
 
 See `LICENSE` for more information.
