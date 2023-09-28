@@ -66,6 +66,9 @@ module.exports = function (eleventyConfig) {
   
   eleventyConfig.addNunjucksShortcode("markdownRender", markdownFilter);
   
+  eleventyConfig.addPairedShortcode("markdown", (content) => {
+    return md.render(content);
+  });
   
   
   

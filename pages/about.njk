@@ -8,7 +8,7 @@ permalink: "/about/"
 {% section { 
 	id: 'about-main',
 	background: { 
-		css: 'py-16',
+		css: 'py-0',
 		image: {
 			enabled: false,
 			url: '/images/backgrounds/white-abstract-2.jpg',
@@ -29,5 +29,12 @@ permalink: "/about/"
 } 
 %}
 	 <h1 class='display-2'>About</h1>
+	 
+	 
+	 <div class='article'>
+	  {% markdown %}
+			{%- include "../copy/about.md" -%}
+		{% endmarkdown %}
+	 <div>
 	{% endsection %}
 {% endblock %}
