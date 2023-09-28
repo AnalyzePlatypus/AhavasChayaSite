@@ -16,7 +16,9 @@ module.exports = {
           200: "#A9DDFF",
           100: "#F1F4FE" 
         },
-        
+        'section-theme': {
+          1: "hsl(var(--section-theme--text-level-1) / <alpha-value>)",
+        }
       },
     },
     fontFamily: {

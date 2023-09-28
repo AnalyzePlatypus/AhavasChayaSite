@@ -1,41 +1,80 @@
-<section class='w-full bg-gradient-to-t from-slate-100 to-slate-200 mt-16'>
-	<article class='max-w-6xl mx-auto py-12 sm:py-24 px-6 flex flex-col-reverse sm:flex-row justify-between '>
-			<div class='flex flex-col items-center text-center'>
-				<h3 class='text-4xl font-bold'>{{ seo.title }}</h3>
-				<p class="leading-tight opacity-60 mt-4 pb-4">© {{ settings.legal.siteStartYear }}-<span x-data='{}' x-text='new Date().getFullYear()'>2023</span> {{ settings.legal.companyName }}</br>All rights reserved.</p>
-				
-				<div class='flex mb-12'>
-					{% for link in socialLinks %}
-						<a href='{{ link.url }}'   {% if link.openInNewTab %} noopener target='_blank' {% endif %} class='inline-block text-slate-700 hover:text-slate-900 hover:bg-slate-300 bg-slate-200 p-2 rounded-full mr-2'>
-							{{ link.iconPath| svgContents("icon-lg") | safe }}
-						</a>
-					{% endfor %}
+{% section { 
+	id: 'site-footer',
+	background: { 
+		css: 'bg-gradient-to-br from-slate-800 to-slate-900 section-theme-dark',
+		image: {
+			enabled: false,
+			url: '/images/backgrounds/white-abstract-2.jpg',
+			alt: 'Hexagons on a light background', 
+			opacity: 0.5,
+			css: 'object-cover scale-110',
+			attributes: 'rellax data-rellax-speed="-1"'
+		},
+		overlay: {
+			enabled: false,
+			css: 'bg-white',
+			opacity: 0.85
+		}
+	},
+	content: {
+		css: ''
+	}
+} 
+%}
+
+	<div class='flex flex-col w-full'>
+
+		<div class="footer-links flex gap-4 justify-between flex-col md:flex-row flex-wrap">
+			{% for group in footerLinks %}
+				<div class="group first:pr-12 pb-12">
+					<h2 class="font-bold text-lg pb-2">{{ group.title }}</h2>
+					<ul class='footer-link-list'>
+						{% for link in group.links %}
+							<li class='flex items-center w-full transition-all rounded-md'>
+								<a href="{{ link.url }}"  {% if link.openInNewTab %} noopener target='_blank' {% endif %} class="{% if not link.badge %}  w-full {% endif %} py-2 sm:py-2">{{ link.title}}</a>
+								{% if link.badge %}
+									<div>
+										<span class='ml-2 bg-slate-300 rounded-full text-xs font-bold uppercase py-1 px-2 h-fit tracking-wide text-slate-800'>
+											{{ link.badge }}
+										</span>
+									</div>
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
 				</div>
-		  </div>
+			{% endfor %}
+		</div>
+		
+		<div>
+		
 			
-			<div class="footer-links sm:mx-4 sm:mx-12 grid gap-4 grid-cols-1 sm:grid-cols-2 col-span-2">
-				{% for group in footerLinks %}
-					<div class="group first:pr-12 pb-12">
-						<h2 class="font-bold text-lg pb-2">{{ group.title }}</h2>
-						<ul>
-							{% for link in group.links %}
-								<li class='flex items-center w-full transition-all rounded-md'>
-									<a href="{{ link.url }}"  {% if link.openInNewTab %} noopener target='_blank' {% endif %} class="{% if not link.badge %}  w-full {% endif %} py-2 sm:py-1">{{ link.title}}</a>
-									{% if link.badge %}
-										<div>
-											<span class='ml-2 bg-slate-300 rounded-full text-xs font-bold uppercase py-1 px-2 h-fit tracking-wide text-slate-800'>
-												{{ link.badge }}
-											</span>
-										</div>
-									{% endif %}
-								</li>
-							{% endfor %}
-						</ul>
-					</div>
+			<div class='md:hidden'>
+			{{ '/images/logos/Wide - Color - On Dark.svg' | svgContents("max-w-sm mx-auto") | safe }}
+			
+			
+			<p class="leading-tight opacity-60 mt-4 pb-4 text-sm text-center">© {{ settings.legal.siteStartYear }}-<span x-data='{}' x-text='new Date().getFullYear()'>2023</span> {{ settings.legal.companyName }}</br>All rights reserved.</p>
+			
+			</div>
+			
+			
+			
+			
+			<div class='hidden md:block'>
+			
+			{{ '/images/logos/Footer Logo - Live Text.svg' | svgContents("") | safe }} 
+			
+			</div>
+			
+			<div class='flex mb-4'>
+				{% for link in socialLinks %}
+					<a href='{{ link.url }}'   {% if link.openInNewTab %} noopener target='_blank' {% endif %} class='inline-block text-slate-700 hover:text-slate-900 hover:bg-slate-300 bg-slate-200 p-2 rounded-full mr-2'>
+						{{ link.iconPath| svgContents("icon-lg") | safe }}
+					</a>
 				{% endfor %}
 			</div>
+		</div>
+		
+	</div>
 
-		
-		
-	</article>
-</section>
+{% endsection %}

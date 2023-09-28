@@ -5,5 +5,29 @@ permalink: "/contact/"
 {% extends "_includes/default.njk" %}
 
 {% block content %}
-	 <h1>Contact Us</h1>
+{% section { 
+	id: 'contact-main',
+	background: { 
+		css: 'py-16',
+		image: {
+			enabled: false,
+			url: '/images/backgrounds/white-abstract-2.jpg',
+			alt: 'Hexagons on a light background', 
+			opacity: 0.5,
+			css: 'object-cover scale-110',
+			attributes: 'rellax data-rellax-speed="-1"'
+		},
+		overlay: {
+			enabled: false,
+			css: 'bg-white',
+			opacity: 0.85
+		}
+	},
+	content: {
+		css: ''
+	}
+} 
+%}
+	 <h1 class='display-2'>Contact</h1>
+	{% endsection %}
 {% endblock %}

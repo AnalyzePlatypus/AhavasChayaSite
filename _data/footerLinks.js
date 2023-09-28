@@ -1,49 +1,62 @@
 module.exports = [
 	{
-		title: "Learn More",
+		title: "Our Services",
 		links: [
 		 
 			{
-				title: "Promo Video",
-				url: "https://www.youtube.com",
-				badge: "new",
-				openInNewTab: true
+				title: "Eligibility",
+				url: "/eligibility",
 			},
 			{
-			  title: "FAQs",
-			  url: "/faqs",
+				title: "FAQ",
+				url: "/faq",
 			},
 			{
-			  title: "About us",
-			  url: "#",
+				title: "Apply online",
+				url: "/apply",
 			},
 			{
-				title: "Testimonials",
-				url: "#",
+				title: "Parents form",
+				url: "/parent-form",
 			},
 			{
-				title: "Press Kit",
-				url: "#",
-				badge: "updated"
+				title: "School/Liason form",
+				url: "/liason-form",
 			},
 		]
 	},
 	{
-		title: "Contact Us",
+		title: "Learn More",
+		links: [
+		 
+			{
+				title: "About",
+				url: "/about",
+			},
+			{
+			  title: "Contact",
+			  url: "/contact",
+			},
+			{
+			  title: "Donate",
+			  url: "/donate",
+			},
+		]
+	},
+	{
+		title: "Legal",
 		links: [
 			{
-				title: "Call 123-456-7890",
-				url: "tel:+18482149700",
-				cssClasses: ""
+				title: "Privacy Policy",
+				url: "/privacy",
 			},
 			{
-				title: "Chat on WhatsApp",
-				url: "https://wa.me/+1234567890",
-				openInNewTab: true,
+				title: "Terms",
+				url: "/terms",
 			},
 			{
-				title: "bob@example.com",
-				url: "mailto:bob@example.com",
+				title: "Nonprofit Status",
+				url: "/nonprofit",
 			},
 		]
 	}

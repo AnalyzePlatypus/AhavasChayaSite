@@ -1,6 +1,6 @@
 module.exports = {
 	header: {
-		sticky: false
+		sticky: true
 	},
 	announcementBar: {
 		enabled: true,

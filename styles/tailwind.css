@@ -3,22 +3,20 @@
 @tailwind utilities;
 
 @layer utilities {
-  .change {
-    color: slate-600;
-  }
+  
 }
 
 :root {
-  --theme-light--color--text-level-1:  theme(colors.stone.900);
-  --theme-light--color--text-level-2:  theme(colors.stone.800);
-  --theme-light--color--text-level-3:  theme(colors.stone.700);
-  --theme-light--color--text-level-4:  theme(colors.stone.600);
-  --theme-light--color--text-level-5:  theme(colors.stone.500);
-  --theme-light--color--text-level-6:  theme(colors.stone.400);
-  --theme-light--color--text-level-7:  theme(colors.stone.300);
-  --theme-light--color--text-level-8:  theme(colors.stone.200);
-  --theme-light--color--text-level-9:  theme(colors.stone.100);
-  --theme-light--color--text-level-10:  theme(colors.stone.50);
+  --theme-light--color--text-level-1:  theme(colors.slate.900);
+  --theme-light--color--text-level-2:  theme(colors.slate.800);
+  --theme-light--color--text-level-3:  theme(colors.slate.700);
+  --theme-light--color--text-level-4:  theme(colors.slate.600);
+  --theme-light--color--text-level-5:  theme(colors.slate.500);
+  --theme-light--color--text-level-6:  theme(colors.slate.400);
+  --theme-light--color--text-level-7:  theme(colors.slate.300);
+  --theme-light--color--text-level-8:  theme(colors.slate.200);
+  --theme-light--color--text-level-9:  theme(colors.slate.100);
+  --theme-light--color--text-level-10:  theme(colors.slate.50);
 }
 
 .theme--light {
@@ -34,7 +32,11 @@
 }
 
 html {
-  background: theme(colors.slate.100);
+  background: theme(colors.white);
+}
+
+main {
+  background: theme(colors.white);
 }
 
 
@@ -129,7 +131,7 @@ html {
 @layer components {
 
   .button {
-    @apply inline-block relative rounded-sm border-2 border-transparent font-semibold cursor-pointer disabled:opacity-30 disabled:cursor-default uppercase tracking-wide;
+    @apply inline-block relative rounded-sm border-2 border-transparent font-semibold cursor-pointer disabled:opacity-30 disabled:cursor-default uppercase tracking-wide no-underline;
     /* hover:underline hover:decoration-2 disabled:hover:no-underline;  */
   }
   
@@ -146,39 +148,58 @@ html {
   }
   
   .button.primary {
-    @apply bg-black text-white bg-opacity-95 hover:bg-opacity-100 disabled:hover:bg-opacity-80;
+    @apply bg-black text-white bg-opacity-90 hover:bg-opacity-100 disabled:hover:bg-opacity-80;
+    color: var(--button--text-color--primary);
+    background-color: var(--button--background-color--primary);
+    border-color: var(--button--border-color--primary);
+  }
+  
+  .button.primary:hover,
+  .button.primary.hover {
+    @apply hover:bg-opacity-95;
+  }
+  
+  .button.primary:active,
+  .button.primary.active {
+    @apply hover:bg-opacity-100;
   }
   
   .button.primary::after {
-    background-color: #fff;
+    background-color: var(--button--text-color--primary);
+  }
+  
+  .button.secondary::after {
+    background-color: var(--button--text-color--secondary);
+  }
+  
+  .button.tertiary::after {
+    background-color: var(--button--text-color--tertiary);
   }
   
   .button.secondary {
-    @apply text-black border-black border-2 bg-white hover:bg-opacity-10 disabled:hover:bg-opacity-10;
+    @apply border-2 hover:bg-opacity-10 disabled:hover:bg-opacity-10;
+    
+    color: var(--button--text-color--secondary);
+    background-color: var(--button--background-color--secondary);
+    border-color: var(--button--border-color--secondary);
   }
   
   .button.tertiary {
-    @apply border-black border-opacity-10 hover:border-opacity-20 disabled:hover:border-opacity-10;
+    @apply border-opacity-10 hover:border-opacity-50 disabled:hover:border-opacity-10;
+    color: var(--button--text-color--tertiary);
+    background-color: var(--button--background-color--tertiary);
+    border-color: var(--button--border-color--tertiary);
   }
   
-  
-  .button.primary.inverse {
-    @apply bg-white text-slate-600 bg-opacity-80 hover:bg-opacity-100 disabled:hover:bg-opacity-80;
-  }
-  
-  .button.secondary.inverse {
-    @apply bg-white text-white bg-opacity-10 hover:bg-opacity-20 disabled:hover:bg-opacity-10;
-  }
-  
-  .button.tertiary.inverse {
-    @apply border-white border-opacity-20 hover:border-opacity-30 disabled:hover:border-opacity-10;
-  }
   
   /* Button FX */
   
   a {
     position: relative;
   }
+  
+  
+  /* From https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
   
   a::after,
   .button::after {
@@ -189,13 +210,12 @@ html {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #000;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
   
-  a:hover::after,
-  .button:hover::after {
+  a:not([disabled]):hover::after,
+  .button:not([disabled]):hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
@@ -218,3 +238,228 @@ html {
   
 }
 
+
+.section-theme-light {
+  --default-text-color: var(--theme--text-level-2);
+  
+  --display-text-color: var(--theme--text-level-1);
+  --heading-text-color: var(--theme--text-level-2);
+  --lead-text-color: var(--theme--text-level-3);
+  --body-text-color: var(--theme--text-level-5);
+  --eyebrow-text-color: var(--theme--text-level-5);
+  
+  --button--text-color--primary: theme(colors.white);
+  --button--background-color--primary: theme(colors.black);
+  --button--border-color--primary: theme(colors.black);
+  
+  
+  --button--text-color--secondary: theme(colors.black);
+  --button--background-color--secondary: theme(colors.white);
+  --button--border-color--secondary: theme(colors.black);
+  
+  
+  --button--text-color--tertiary: theme(colors.slate.700);
+  --button--background-color--tertiary: theme(colors.white);
+  --button--border-color--tertiary: theme(colors.slate.200);
+  
+  --section-theme--text-level-1: var(--theme--text-level-1);
+  --section-theme--text-level-2: var(--theme--text-level-2);
+  --section-theme--text-level-3: var(--theme--text-level-3);
+  --section-theme--text-level-4: var(--theme--text-level-4);
+  --section-theme--text-level-5: var(--theme--text-level-5);
+  --section-theme--text-level-6: var(--theme--text-level-6);
+  --section-theme--text-level-7: var(--theme--text-level-7);
+  --section-theme--text-level-8: var(--theme--text-level-8);
+  --section-theme--text-level-9: var(--theme--text-level-9);
+}
+
+.section-theme-light--background {
+  @apply bg-slate-50;
+  color: var(--default-text-color);
+}
+
+.section-theme-dark {
+  --default-text-color: var(--theme--text-level-8);
+  
+  --display-text-color: var(--theme--text-level-9);
+  --heading-text-color: var(--theme--text-level-9);
+  --lead-text-color: var(--theme--text-level-8);
+  --body-text-color: var(--theme--text-level-7);
+  --eyebrow-text-color: var(--theme--text-level-5);
+  
+ --button--text-color--primary: theme(colors.black);
+ --button--border-color--primary: theme(colors.white);
+ --button--background-color--primary: theme(colors.white);
+ 
+ --button--text-color--secondary: theme(colors.white);
+ --button--background-color--secondary: theme(colors.black);
+ --button--border-color--secondary: theme(colors.white);
+ 
+ 
+ --button--text-color--tertiary: theme(colors.slate.200);
+ --button--background-color--tertiary: theme(colors.black);
+ --button--border-color--tertiary: theme(colors.slate.400);
+ 
+ --section-theme--text-level-1: var(--theme--text-level-9);
+ --section-theme--text-level-2: var(--theme--text-level-8);
+ --section-theme--text-level-3: var(--theme--text-level-7);
+ --section-theme--text-level-4: var(--theme--text-level-6);
+ --section-theme--text-level-5: var(--theme--text-level-5);
+ --section-theme--text-level-6: var(--theme--text-level-4);
+ --section-theme--text-level-7: var(--theme--text-level-3);
+ --section-theme--text-level-8: var(--theme--text-level-2);
+ --section-theme--text-level-9: var(--theme--text-level-1);
+}
+
+.section-theme-dark--background {
+  @apply bg-slate-900;
+  color: var(--default-text-color);
+}
+
+
+
+
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  @apply font-sans font-bold mb-2 leading-tight;
+  color: var(--heading-text-color);
+}
+
+.display-1, .display-2, .display-3, .display-4 {
+  @apply font-sans font-semibold leading-relaxed mb-6;
+  color: var(--display-text-color);
+}
+
+.display-1 {
+  @apply text-6xl sm:text-7xl;
+} 
+
+.display-2 {
+  @apply text-5xl sm:text-6xl;
+} 
+
+.display-3 {
+  @apply text-4xl sm:text-5xl;
+} 
+
+.display-4 {
+  @apply text-4xl;
+}
+
+.h1 {
+  @apply text-3xl;
+}
+
+.h2 {
+  @apply text-2xl;
+}
+
+.h3 {
+  @apply text-xl;
+}
+
+.h4 {
+  @apply text-lg;
+}
+
+.h5 {
+  @apply text-base;
+}
+
+.h6 {
+  @apply text-sm;
+}
+
+.lead {
+ @apply text-xl mb-4; 
+ color: var(--lead-text-color);
+}
+
+
+
+hr {
+  @apply my-8;
+}
+
+.eyebrow {
+  @apply text-sm sm:text-xs uppercase tracking-wider font-bold mb-0 opacity-80;
+  color: var(--eyebrow-text-color);
+}
+
+small {
+  @apply text-sm font-semibold leading-tight;
+  color: var(--theme--text-level-3);
+}
+
+p {
+  @apply text-lg sm:text-base mb-3 leading-relaxed; 
+  color: var(--body-text-color);
+  max-width: 80ch;
+}
+
+p a {
+  @apply font-semibold underline decoration-2 underline-offset-2 decoration-sky-500 hover:text-sky-500 transition-all;
+  color: var(--theme--text-level-3);
+}
+
+figure:has(.blockquote) {
+  @apply bg-slate-100 rounded-sm p-6 mb-6;
+}
+
+.blockquote {
+  @apply text-lg sm:leading-tight mb-2;
+  color: var(--theme--text-level-1);
+}
+
+.blockquote-footer {
+  @apply uppercase font-bold text-xs tracking-wide;
+  color: var(--theme--text-level-5);
+}
+
+.blockquote-footer::before {
+  color: var(--theme--text-level-4);
+  content: "– ";
+}
+
+ol, ul {
+  @apply ml-6 mb-4;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+ol li, 
+ul li {
+  @apply text-lg;
+  color: var(--theme--text-level-3);
+}
+
+picture {
+  @apply block h-full w-full;
+}
+
+picture img {
+  @apply block h-full w-full;
+}
+
+.footer-link-list {
+  @apply ml-0;
+  
+}
+
+.footer-links h2 {
+  color: var(--section-theme--text-level-2);
+}
+
+.footer-links li a {
+  @apply transition-all;
+  color: var(--section-theme--text-level-4);
+}
+
+.footer-links li:hover a {
+  color: var(--section-theme--text-level-2);
+}
