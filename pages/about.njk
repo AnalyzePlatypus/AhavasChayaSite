@@ -3,6 +3,7 @@ permalink: "/about/"
 ---
 
 {% extends "_includes/default.njk" %}
+{%- from '_includes/components/macros/page-header.njk' import pageHeader %}
 
 {% block content %}
 {% section { 
@@ -28,13 +29,23 @@ permalink: "/about/"
 	}
 } 
 %}
-	 <h1 class='display-2'>About</h1>
+	 
 	 
 	 
 	 <div class='article'>
+	 	
+		 {{ 
+				pageHeader({ 
+					title: "About", 
+					subtitle: "Learn more about Ahavas Chaya" 
+			 }) 
+		 }}
+	 
 	  {% markdown %}
 			{%- include "../copy/about.md" -%}
 		{% endmarkdown %}
-	 <div>
+	 </div>
+	 
+	 {%- include "components/wrapups/contact-wrapup.njk" -%} 
 	{% endsection %}
 {% endblock %}

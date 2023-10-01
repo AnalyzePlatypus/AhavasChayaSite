@@ -9,7 +9,7 @@ module.exports = [
 			},
 			{
 				title: "FAQ",
-				url: "/faq",
+				url: "/#faq",
 			},
 			{
 				title: "Apply online",
@@ -20,8 +20,8 @@ module.exports = [
 				url: "/parent-form",
 			},
 			{
-				title: "School/Liason form",
-				url: "/liason-form",
+				title: "School/liaison form",
+				url: "/liaison-form",
 			},
 		]
 	},

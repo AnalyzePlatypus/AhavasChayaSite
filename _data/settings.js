@@ -4,8 +4,8 @@ module.exports = {
 	},
 	announcementBar: {
 		enabled: true,
-		highlightedText: '👋 Hey, welcome!',
-		regularText: 'We\'re still working on things, but feel free to look around.',
+		highlightedText: '🚧 Hey, welcome!',
+		regularText: 'We\'re under construction, but feel free to look around.',
 		url: "#",
 		closable: false,
 		onCloseSetLocalStorageKey: "announcementClosed-61728"

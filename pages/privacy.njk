@@ -1,0 +1,46 @@
+---
+permalink: "/privacy/"
+autoformatMarkdownDocument: true
+---
+
+{% extends "_includes/default.njk" %}
+{%- from '_includes/components/macros/page-header.njk' import pageHeader %}
+
+{% block content %}
+{% section { 
+	id: 'about-main',
+	background: { 
+		css: 'py-0',
+		image: {
+		},
+		overlay: {
+		}
+	},
+	content: {
+		css: ''
+	}
+} 
+%}
+	 
+	 
+	 
+	 <div class='article'>
+	 
+	  {{ 
+	 		pageHeader({ 
+	 			title: "Privacy Policy", 
+		 		subtitle: "Updated October 1, 2023" 
+			}) 
+		}}
+	  
+		{% markdown %}
+			{%- include "../copy/privacy.md" -%}
+		{% endmarkdown %}
+	 <div>
+	 
+	{%- include "components/wrapups/contact-wrapup.njk" -%} 
+	
+	{% endsection %}
+	
+	
+{% endblock %}

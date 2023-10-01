@@ -48,7 +48,7 @@
    </script>
     
   </head>
-  <body class='relative min-h-screen flex flex-col items-stretch theme--light section-theme-light'>
+  <body class='relative min-h-screen flex flex-col items-stretch theme--light section-theme-light {% if autoformatMarkdownDocument %} autoformat-markdown {% endif %}'>
     {% include 'components/app.njk'%}
     {% include 'components/announcement-bar.njk'%}
     {% include 'components/navbar.njk'%}    

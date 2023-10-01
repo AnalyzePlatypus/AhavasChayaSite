@@ -8,7 +8,7 @@ permalink: "/nonprofit/"
 {% section { 
 	id: 'about-main',
 	background: { 
-		css: 'py-16',
+		css: '',
 		image: {
 			enabled: false,
 			url: '/images/backgrounds/white-abstract-2.jpg',
@@ -24,10 +24,59 @@ permalink: "/nonprofit/"
 		}
 	},
 	content: {
-		css: ''
+		css: 'article'
 	}
 } 
 %}
 	 <h1 class='display-2'>Nonprofit Status</h1>
+	 
+	 <p>Ahavas Chaya is a IRS-registered nonprofit in the state of New York.</p>
+	 	
+		<p class='block flex gap-1'>
+		{{ '/phosphor-icons/fill/check-circle-fill.svg' | svgContents("icon-lg fill-emerald-500") | safe }}
+		Registered 501(c)(3) nonprofit
+		</p>
+		
+		<p class='block flex gap-1'>
+		{{ '/phosphor-icons/fill/check-circle-fill.svg' | svgContents("icon-lg fill-emerald-500") | safe }}
+		All donations are tax deductibile
+		</p>
+		
+		<p class='block flex gap-1'>
+		{{ '/phosphor-icons/fill/check-circle-fill.svg' | svgContents("icon-lg fill-emerald-500") | safe }}
+		Maaser money can be used
+		</p>
+	
+		<p class='block flex gap-1'>
+		{{ '/phosphor-icons/fill/info-fill.svg' | svgContents("icon-lg fill-sky-500") | safe }}
+		IRS EIN: 86-3024529</p>
+	 
+	 	<hr/>
+	 
+	 <p>
+	 	<span class='text-slate-800 font-semibold'>Legal address:</span><br/>
+		3512 Quentin Road, <br/>Suite LL100-2, <br/>BROOKLYN, NY, <br/>UNITED STATES, <br/>11234
+	 </p>
+	 
+	 <p>
+			View our 
+			
+			{% link {
+			 url: "https://www.charitynavigator.org/ein/863024529", 
+			 label: "Charity Navigator profile ›",
+			 openInNewTab: true,
+			 fathomClickId: ""
+			} %}
+			{% endlink %}
+		</p>
+		
+		<a href='/contact' class='bg-gradient-to-br from-slate-700 to-slate-900 rounded-sm p-8 flex flex-col items-center mt-8 section-theme-dark'>
+			<h2 class='h2'>Got questions?</h2>
+			<p>We're happy to help!</p>
+			<button type='button' class='button primary medium'>
+			Contact us
+			</button>
+		</a>
+		 
 	{% endsection %}
 {% endblock %}

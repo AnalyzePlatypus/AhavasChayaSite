@@ -245,7 +245,7 @@ main {
   --display-text-color: var(--theme--text-level-1);
   --heading-text-color: var(--theme--text-level-2);
   --lead-text-color: var(--theme--text-level-3);
-  --body-text-color: var(--theme--text-level-5);
+  --body-text-color: var(--theme--text-level-4);
   --eyebrow-text-color: var(--theme--text-level-5);
   
   --button--text-color--primary: theme(colors.white);
@@ -319,52 +319,66 @@ main {
 
 
 
+.autoformat-markdown h1,
+.autoformat-markdown h2,
+.autoformat-markdown h3,
+.autoformat-markdown h4,
+.autoformat-markdown h5,
+.autoformat-markdown h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
   @apply font-sans font-bold mb-2 leading-tight;
   color: var(--heading-text-color);
 }
 
 .display-1, .display-2, .display-3, .display-4 {
-  @apply font-sans font-semibold leading-relaxed mb-6;
+  @apply font-sans font-semibold leading-tight mb-3;
   color: var(--display-text-color);
 }
 
 .display-1 {
-  @apply text-6xl sm:text-7xl;
+  @apply text-5xl sm:text-7xl;
 } 
 
+.autoformat-markdown h1,
 .display-2 {
-  @apply text-5xl sm:text-6xl;
+  @apply text-4xl sm:text-6xl;
 } 
 
 .display-3 {
-  @apply text-4xl sm:text-5xl;
+  @apply text-3xl sm:text-5xl;
 } 
 
 .display-4 {
-  @apply text-4xl;
+  @apply text-2xl;
 }
+
+
 
 .h1 {
   @apply text-3xl;
 }
 
+.autoformat-markdown h2,
 .h2 {
   @apply text-2xl;
 }
 
+.autoformat-markdown h3,
 .h3 {
   @apply text-xl;
 }
 
+.autoformat-markdown h4,
 .h4 {
   @apply text-lg;
 }
 
+.autoformat-markdown h5,
 .h5 {
   @apply text-base;
 }
 
+.autoformat-markdown h6,
 .h6 {
   @apply text-sm;
 }
@@ -432,10 +446,12 @@ ol {
   @apply list-decimal;
 }
 
+
+.autoformat-markdown li,
 ol li, 
 ul li {
   @apply text-lg;
-  color: var(--theme--text-level-3);
+  color: var(--body-text-color);
 }
 
 picture {
@@ -464,7 +480,11 @@ picture img {
   color: var(--section-theme--text-level-2);
 }
 
+.article {
+  @apply max-w-2xl w-fit mx-auto;
+}
+
 .article p {
-  @apply block text-xl mb-4;
+  @apply block text-lg mb-4;
   max-width: 60ch;
 }

@@ -3,34 +3,41 @@ permalink: "/donate/"
 ---
 
 {% extends "_includes/default.njk" %}
+{%- from '_includes/components/macros/page-header.njk' import pageHeader %}
 
 {% block content %}
-{% section { 
-	id: 'donate-main',
-	background: { 
-		css: '',
-		image: {
-			enabled: false,
-			url: '/images/backgrounds/white-abstract-2.jpg',
-			alt: 'Hexagons on a light background', 
-			opacity: 0.5,
-			css: 'object-cover scale-110',
-			attributes: 'rellax data-rellax-speed="-1"'
+
+	{% section { 
+		id: 'donate-main',
+		background: { 
+			css: '',
+			image: {
+				enabled: false,
+				url: '/images/backgrounds/hexagon-background.jpg',
+				alt: 'Hexagons on a light background', 
+				opacity: 0.2,
+				css: 'object-cover scale-110',
+				attributes: 'rellax data-rellax-speed="-1"'
+			},
+			overlay: {
+				enabled: false,
+				css: 'bg-white',
+				opacity: 0.9
+			}
 		},
-		overlay: {
-			enabled: false,
-			css: 'bg-white',
-			opacity: 0.85
+		content: {
+			css: ''
 		}
-	},
-	content: {
-		css: ''
-	}
-} 
-%}
-	 <h1 class='display-2'>Donate</h1>
-	 <p class='lead mb-6'>Help us fund life chaging therapy for kids and teens in need!</p>
-	 
+	} 
+	%}
+		
+	 {{ 
+			 pageHeader({ 
+				 title: "Donate", 
+				 subtitle: "Help us fund life chaging therapy for kids and teens in need!" 
+			}) 
+		}}
+	 	
 	{% endsection %}
 	
 	<iframe src='https://secure.cardknox.com/ahavaschaya' width='100%' height='1800' scrolling='no'>

@@ -3,6 +3,7 @@ permalink: "/apply/"
 ---
 
 {% extends "_includes/default.njk" %}
+{%- from '_includes/components/macros/page-header.njk' import pageHeader %}
 
 {% block content %}
 {% section { 
@@ -28,6 +29,13 @@ permalink: "/apply/"
 	}
 } 
 %}
-	 <h1 class='display-2'>Apply</h1>
+	 {{ 
+			 pageHeader({ 
+				 title: "Apply", 
+				 subtitle: "Begin your application process today!" 
+			}) 
+		}}
+		
+		
 	{% endsection %}
 {% endblock %}

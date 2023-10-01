@@ -110,6 +110,25 @@ To add a [canonical URL](https://developers.google.com/search/docs/crawling-inde
 
 ## Shortcodes
 
+### Link
+
+```nunkucks
+{% link {
+ url: "", 
+ label: "",
+ ariaLabel: "",
+ cssClasses: "",
+ inlineStyles: "",
+ attributes: "",
+ openInNewTab: false,
+ download: false,
+ protectFromScrapers: false,
+ fathomClickId: ""
+} %}
+{% endlink %}
+```
+
+
 ### Embed an SVG
 
 ```
