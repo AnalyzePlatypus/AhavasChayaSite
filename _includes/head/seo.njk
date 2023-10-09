@@ -6,7 +6,7 @@
 <meta name="title" content="{{ title or seo.title }}">
 <meta name="description" content="{{ description or seo.description }}">
 <meta name="author" content="{{ author or seo.title}}">
-<meta name="image" content="{{seo.imagePath}}?v={% version %}" />
+<meta name="image" content="{% env "ROOT_URL" %}{{seo.imagePath}}?v={% version %}" />
 
 <!-- Colors -->
 <meta name="theme-color" content="{{ seo.themeColor }}">
@@ -17,7 +17,7 @@
 <meta property="og:url" content="{{ url or seo.url }}">
 <meta property="og:title" content="{{ title or seo.title }}">
 <meta property="og:description" content="{{ description or seo.description }}">
-<meta property="og:image" content="{{ ogImagePath or seo.imagePath }}?v={% version %}">
+<meta property="og:image" content="{% env "ROOT_URL" %}{{ ogImagePath or seo.imagePath }}?v={% version %}">
 
 <meta property="og:image:width" content="{{ ogImageWidth or seo.imageWidth }}">
 <meta property="og:image:height" content="{{ ogImageHeight or seo.imageHeight }}">
@@ -27,14 +27,14 @@
 <meta name="twitter:title" content="{{ title or seo.title }}" />
 <meta name="twitter:url" content="{{seo.url}}" />
 <meta name="twitter:description" content="{{seo.description}}" />
-<meta name="twitter:image" content="{{seo.image}}?v={% version %}" />
+<meta name="twitter:image" content="{% env "ROOT_URL" %}{{seo.image}}?v={% version %}" />
 <meta name="twitter:creator" content="{{seo.twitterUsername}}" />
 
 <!-- Icons -->
-<link rel="apple-touch-icon" href="{{seo.appleTouchIconPath}}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{seo.appleTouchIconPath}}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{seo.favicon32Path}}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{seo.favicon16Path}}">
+<link rel="apple-touch-icon" href="{% env "ROOT_URL" %}{{seo.appleTouchIconPath}}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% env "ROOT_URL" %}{{seo.appleTouchIconPath}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% env "ROOT_URL" %}{{seo.favicon32Path}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% env "ROOT_URL" %}{{seo.favicon16Path}}">
 
 <!-- Web manifest -->
 <link rel="manifest" href="/manifest.json">
