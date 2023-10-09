@@ -87,7 +87,7 @@ async function renderSection(content, settings) {
 	
 	const html = `
 		<section id='${ id }' class='w-full relative z-0 overflow-hidden ${ s("background.css") }'>
-			<article class='relative z-20 max-w-6xl mx-auto px-6 py-12 sm:py-24 ${ s('content.css') }'>		
+			<article class='relative z-20 max-w-5xl mx-auto px-6 py-12 sm:py-12 ${ s('content.css') }'>		
 				${ content }
 			</article>
 			

@@ -131,7 +131,7 @@ main {
 @layer components {
 
   .button {
-    @apply inline-block relative rounded-sm border-2 border-transparent font-semibold cursor-pointer disabled:opacity-30 disabled:cursor-default uppercase tracking-wide no-underline;
+    @apply inline-block relative rounded-full border-2 border-transparent font-semibold cursor-pointer disabled:opacity-30 disabled:cursor-default tracking-wide no-underline shadow-sm transition-all;
     /* hover:underline hover:decoration-2 disabled:hover:no-underline;  */
   }
   
@@ -148,7 +148,7 @@ main {
   }
   
   .button.primary {
-    @apply bg-black text-white bg-opacity-90 hover:bg-opacity-100 disabled:hover:bg-opacity-80;
+    @apply border-2 text-white bg-opacity-90 hover:bg-opacity-100 disabled:hover:bg-opacity-80;
     color: var(--button--text-color--primary);
     background-color: var(--button--background-color--primary);
     border-color: var(--button--border-color--primary);
@@ -156,12 +156,12 @@ main {
   
   .button.primary:hover,
   .button.primary.hover {
-    @apply hover:bg-opacity-95;
+    @apply hover:brightness-110 disabled:hover:brightness-100;
   }
   
   .button.primary:active,
   .button.primary.active {
-    @apply hover:bg-opacity-100;
+    @apply hover:brightness-125 disabled:hover:brightness-100;
   }
   
   .button.primary::after {
@@ -177,11 +177,21 @@ main {
   }
   
   .button.secondary {
-    @apply border-2 hover:bg-opacity-10 disabled:hover:bg-opacity-10;
+    @apply border-2;
     
     color: var(--button--text-color--secondary);
     background-color: var(--button--background-color--secondary);
     border-color: var(--button--border-color--secondary);
+  }
+  
+  .button.secondary:hover,
+  .button.secondary.hover {
+    @apply brightness-110 disabled:brightness-100;
+  }
+  
+  .button.secondary:active,
+  .button.secondary.active {
+    @apply hover:brightness-125 disabled:hover:brightness-100;
   }
   
   .button.tertiary {
@@ -189,6 +199,10 @@ main {
     color: var(--button--text-color--tertiary);
     background-color: var(--button--background-color--tertiary);
     border-color: var(--button--border-color--tertiary);
+  }
+  
+  .button.tertiary:hover {
+    @apply bg-black text-white;
   }
   
   
@@ -201,7 +215,7 @@ main {
   
   /* From https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
   
-  a::after,
+  /* a::after,
   .button::after {
     content: '';
     position: absolute;
@@ -218,7 +232,7 @@ main {
   .button:not([disabled]):hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+  } */
   
   
   
@@ -249,18 +263,18 @@ main {
   --eyebrow-text-color: var(--theme--text-level-5);
   
   --button--text-color--primary: theme(colors.white);
-  --button--background-color--primary: theme(colors.black);
-  --button--border-color--primary: theme(colors.black);
+  --button--background-color--primary: theme(colors.blue.500);
+  --button--border-color--primary: theme(colors.blue.500);
   
   
-  --button--text-color--secondary: theme(colors.black);
-  --button--background-color--secondary: theme(colors.white);
+  --button--text-color--secondary: theme(colors.white);
+  --button--background-color--secondary: theme(colors.black);
   --button--border-color--secondary: theme(colors.black);
   
   
   --button--text-color--tertiary: theme(colors.slate.700);
   --button--background-color--tertiary: theme(colors.white);
-  --button--border-color--tertiary: theme(colors.slate.200);
+  --button--border-color--tertiary: theme(colors.slate.700);
   
   --section-theme--text-level-1: var(--theme--text-level-1);
   --section-theme--text-level-2: var(--theme--text-level-2);
@@ -410,8 +424,9 @@ p {
   max-width: 80ch;
 }
 
+table a,
 p a {
-  @apply font-semibold underline decoration-2 underline-offset-2 decoration-sky-500 hover:text-sky-500 transition-all;
+  @apply font-semibold underline decoration-2 underline-offset-2 decoration-blue-400 hover:text-blue-500 transition-all;
   color: var(--theme--text-level-3);
 }
 

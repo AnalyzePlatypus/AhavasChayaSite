@@ -1,9 +1,9 @@
 {% section { 
 	id: 'hero-2',
 	background: { 
-		css: 'py-16',
+		css: 'pt-4 sm:pt-12',
 		image: {
-			enabled: true,
+			enabled: false,
 			url: '/images/backgrounds/white-abstract-2.jpg',
 			alt: 'Hexagons on a light background', 
 			opacity: 0.5,
@@ -30,15 +30,17 @@
 			</a>
 		</p> #}
 		
-		<h1 class='text-5xl sm:text-6xl font-bold mb-6'>The gift of therapy,<br/>for those who need it most.</h1>
+		<h1 class='text-5xl sm:text-6xl font-bold mb-6'><span class='text-blue-500'>Subsidized therapy</span><br/>for single parent kids.</h1>
 		
-		<p class='text-lg max-w-md mb-6'>
-			<span class='font-semibold'>Ahavas Chaya subsidizes therapy</span>
-			<br/>
-			for orphans and kids from single parent homes who cannot afford care.
+		<p class='text-xl sm:text-2xl mb-1 sm:mb-0 text-black'>
+			We're building futures. Changing lives.<br/>
 		</p>
 		
-		<div class='w-full sm:w-fit flex flex-col sm:flex-row justify-between gap-4 sm:justify-start'>
+		<p class='text-xl sm:text-2xl mb-6 text-black'>
+			Because every child <span class='font-bold'>deserves a chance</span>.
+		</p>
+		
+		<div class='w-full sm:w-fit flex flex-col sm:flex-row justify-between gap-2 sm:gap-4 sm:justify-start'>
 			{% link cta.primaryHeroCta %}{% endlink %}
 			{% link cta.secondaryHeroCta %}{% endlink %}
 		</div>

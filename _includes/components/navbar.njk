@@ -4,9 +4,9 @@ x-init="$watch('expanded', (isOpening) => {
 	isOpening ? bodyScrollLock.disableBodyScroll($root) : bodyScrollLock.clearAllBodyScrollLocks()
 })"
 @click.outside='expanded = false'
-class=' pr-2 sm:px-6 sm:py-3 bg-white bg-opacity-80 		backdrop-blur-xl z-20 {% if settings.header.sticky %} sticky top-0 {% endif%}' >
+class=' pr-2 sm:px-6 sm:py-5 bg-white bg-opacity-80 		backdrop-blur-xl z-20 {% if settings.header.sticky %} sticky top-0 {% endif%}' >
 
-	<div class='relative flex justify-between items-center w-full md:max-w-6xl md:mx-auto md:px-6'>
+	<div class='relative flex justify-between items-center w-full md:max-w-5xl md:mx-auto md:px-6'>
 		<button
 			type='button'
 			class='mr-4 sm:hidden p-3 opacity-80 hover:opacity-100 active:bg-slate-100'
@@ -22,12 +22,12 @@ class=' pr-2 sm:px-6 sm:py-3 bg-white bg-opacity-80 		backdrop-blur-xl z-20 {% i
 		
 		<a href='/' class='text-xl sm:text-2xl font-bold block center-transform-all sm:center-transform-none'>
 		
-		{{ '/images/logos/Ahavas Chaya Logo.svg' | svgContents("h-10 mt-2") | safe }}
+		{{ '/images/logos/Ahavas Chaya Logo_Blue.svg' | svgContents("h-10 mt-2") | safe }}
 		
 		<a>
 		
 		{% for link in navlinks %}
-			<a href='{{ link.url }}' class='{{ link.cssClasses }} py-3 px-6'>
+			<a href='{{ link.url }}' class='{{ link.cssClasses }} hover:underline py-3 px-6 text-sm'>
 				{{ link.label }}
 			</a>
 		{% endfor %}

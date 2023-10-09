@@ -3,6 +3,7 @@ permalink: "/contact/"
 ---
 
 {% extends "_includes/default.njk" %}
+{%- from '_includes/components/macros/page-header.njk' import pageHeader %}
 
 {% block content %}
 {% section { 
@@ -28,7 +29,13 @@ permalink: "/contact/"
 	}
 } 
 %}
-	 <h1 class='display-2'>Contact Us</h1>
+	{{ 
+			pageHeader({ 
+				title: "Contact Us", 
+				subtitle: "We can't wait to hear from you." 
+		 }) 
+	 }}
+	 
 	{% endsection %}
 	
 	<iframe

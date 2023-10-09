@@ -5,6 +5,11 @@ module.exports = [
 		"cssClasses": ""
 	},
 	{
+		"label": "Eligibility",
+		"url": "/eligibility",
+		"cssClasses": ""
+	},
+	{
 		"label": "FAQ",
 		"url": "/#faq",
 		"cssClasses": ""

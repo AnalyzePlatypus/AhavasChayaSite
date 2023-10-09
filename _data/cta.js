@@ -7,6 +7,6 @@ module.exports ={
 	secondaryHeroCta: {
 		label: "Apply for a child",
 		url: "/apply",
-		cssClasses: 'button large sm:large secondary w-full sm:w-fit text-center'
+		cssClasses: 'button large sm:large tertiary w-full sm:w-fit text-center'
 	},
 }

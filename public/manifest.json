@@ -2,6 +2,12 @@
     "id": "ahavas-chaya-marketing",
     "version": "0.0.1",
     "manifest_version": 2,
+    "lang": "en",
+    "dir": "ltr",
+    "start_url": "/",
+    "scope": "/",
+    "orientation": "any",
+    "display": "minimal-ui",
     "name": "Ahavas Chaya",
     "short_name": "Ahavas Chaya",
     "description": "Subsidized therapy for single parent kids. Because every child deserves a chance.",
@@ -32,8 +38,5 @@
         }
     ],
     "theme_color": "#4F91F8",
-    "background_color": "#fff",
-    "display": "minimal-ui",
-    "start_url": "/",
-    "orientation": "any"
+    "background_color": "#fff"
 }

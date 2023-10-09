@@ -5,7 +5,7 @@ permalink: "/"
 {% extends "_includes/default.njk" %}
 
 {% block content %}
-   <main class='h-full relative min-h-screen'>     
+   <main class='h-full relative min-h-screen pb-12'>     
       {% include 'components/hero.njk'%}
       
       {# {% include 'sections/kitchen-sink.njk'%} #}
@@ -14,5 +14,9 @@ permalink: "/"
       
       {% include 'components/faq.njk'%}
       {# {% include 'components/mailing-list.njk'%} #}
+      
+      <div class='max-w-5xl mx-auto'>
+         {%- include "components/wrapups/contact-wrapup.njk" -%} 
+      </div>
    </main>
 {% endblock %}

@@ -1,6 +1,7 @@
 ---
 permalink: "/eligibility/"
 ---
+{%- from '_includes/components/macros/page-header.njk' import pageHeader %}
 
 {% extends "_includes/default.njk" %}
 
@@ -8,7 +9,7 @@ permalink: "/eligibility/"
 {% section { 
 	id: 'eligibility-main',
 	background: { 
-		css: 'py-16',
+		css: 'py-0',
 		image: {
 			enabled: false,
 			url: '/images/backgrounds/white-abstract-2.jpg',
@@ -28,6 +29,22 @@ permalink: "/eligibility/"
 	}
 } 
 %}
-	 <h1 class='display-2'>Eligibility</h1>
+
+	<div class='article autoformat-markdown'>
+		 
+		 {{ 
+				pageHeader({ 
+					title: "Eligibility", 
+					subtitle: "Learn more about who's eligible for funding" 
+			 }) 
+		 }}
+	 
+		{% markdown %}
+			{%- include "../copy/eligibility.md" -%}
+		{% endmarkdown %}
+	 </div>
+	 
+	 {%- include "components/wrapups/contact-wrapup.njk" -%} 
+
 	{% endsection %}
 {% endblock %}
