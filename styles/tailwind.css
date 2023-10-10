@@ -52,58 +52,72 @@ main {
 
 .icon-10xl {
   height: 8rem;
+  min-width: 8rem;
 }
 
 .icon-9xl {
   height: 7rem;
+  min-width: 7 rem;
 }
 
 .icon-8xl {
   height: 6rem;
+  min-width: 6rem;
 }
 
 .icon-7xl {
   height: 5rem;
+  min-width: 5rem;
 }
 
 .icon-6xl {
   height: 4.5rem;
+  min-width: 4.5rem;
 }
 
 .icon-5xl {
   height: 3.25rem;
+  min-width: 3.25rem;
 }
 
 .icon-4xl {
   height: 2.75rem;
+  min-width: 2.75rem;
 }
 
 .icon-3xl {
   height: 2.25rem;
+  min-width: 2.25rem;
 }
 
 .icon-2xl {
   height: 2rem;
+  min-width: 2rem;
 }
 
 .icon-xl {
   height: 1.75rem;
+  min-width: 1.75rem;
 }
 
 .icon-lg {
   height: 1.7rem;
+  min-width: 1.7rem;
 }
 
 .icon-md {
   height: 1.5rem;
+  min-width: 1.5rem;
 }
 
 .icon-sm {
   height: 1.2rem;
+  min-width: 1.2rem;
 }
 
 .icon-xs {
   height: 1rem;
+  min-width: 1rem;
 }
 
 .background-pulse {
@@ -345,7 +359,7 @@ main {
 }
 
 .display-1, .display-2, .display-3, .display-4 {
-  @apply font-sans font-semibold leading-tight mb-3;
+  @apply font-sans font-semibold leading-tight mb-1 sm:mb-3;
   color: var(--display-text-color);
 }
 
@@ -405,7 +419,7 @@ main {
 
 
 hr {
-  @apply my-8;
+  @apply my-4;
 }
 
 .eyebrow {
@@ -425,7 +439,8 @@ p {
 }
 
 table a,
-p a {
+p a,
+li a, {
   @apply font-semibold underline decoration-2 underline-offset-2 decoration-blue-400 hover:text-blue-500 transition-all;
   color: var(--theme--text-level-3);
 }
@@ -483,11 +498,12 @@ picture img {
 }
 
 .footer-links h2 {
+  @apply text-base;
   color: var(--section-theme--text-level-2);
 }
 
 .footer-links li a {
-  @apply transition-all;
+  @apply text-sm transition-all no-underline;
   color: var(--section-theme--text-level-4);
 }
 
@@ -500,6 +516,14 @@ picture img {
 }
 
 .article p {
-  @apply block text-lg mb-4;
+  @apply block text-base sm:text-lg mb-2;
   max-width: 60ch;
+}
+
+.application-card {
+  @apply p-6 border-2 border-black rounded-lg shadow-md hover:shadow-lg transition-all w-full;
+}
+
+.application-card h2 {
+  @apply font-bold;
 }
