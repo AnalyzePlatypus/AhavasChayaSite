@@ -1,9 +1,43 @@
----
-permalink: "/donate/"
+---json
+{
+	"pageTitle": "Donate",
+	"pageDescription": "Help us provide life-changing therapy for single-parent kids",
+	"permalink": "/donate/",
+	"meta": {
+		"title": "Donate",
+		"description": "Help us provide life-changing therapy for single-parent kids",
+		"url": "/donate/",
+		"breadcrumbs": [
+			{
+				"name": "Home",
+				"url": "/",
+				"position": 1
+			},
+			{
+				"name": "Donate",
+				"url": "/donate",
+				"position": 2
+			}
+		]
+	}
+}
 ---
 
 {% extends "_includes/default.njk" %}
 {%- from '_includes/components/macros/page-header.njk' import pageHeader %}
+
+{# ---json
+{
+	"pageTitle": "Donate",
+	"pageDescription": "Help us provide life-changing therapy for single-parent kids",
+	"permalink": "/donate/",
+	"meta": {
+		"title": "Donate",
+		"description": "Help us provide life-changing therapy for single-parent kids",
+		"url": "/donate/"
+	}
+}
+--- #}
 
 {% block content %}
 
@@ -37,7 +71,7 @@ permalink: "/donate/"
 				 subtitle: "Help us fund life chaging therapy for kids and teens in need!" 
 			}) 
 		}}
-	 	
+		
 	{% endsection %}
 	
 	<iframe src='https://secure.cardknox.com/ahavaschaya' width='100%' height='1800' scrolling='no'>

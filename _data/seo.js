@@ -1,8 +1,11 @@
+const {
+	ROOT_URL
+} = process.env;
+
 module.exports = {
-	title: "Ahavas Chaya",
-	description: "Subsidized therapy for single parent kids. Because every child deserves a chance.",
-	rootUrl: "https://127.0.0.1:8080",
-	url: "https://127.0.0.1:8080",
+	siteTitle: "Ahavas Chaya",
+	siteDescription: "Subsidized therapy for single parent kids. Because every child deserves a chance.",
+	rootUrl: ROOT_URL,
 	imagePath: "/favicons/OpenGraph.jpg",
 	imageWidth: "1200",
 	imageHeight: "628",
@@ -15,5 +18,4 @@ module.exports = {
 		logoHeight: '512',
 		logoWidth: '512'
 	},
-	canonicalUrl: "https://ahavaschaya.com",
 }

@@ -158,6 +158,24 @@ This can be fixed by manually changing the `viewBox` attribute on the `svg` elem
 viewBox="520 650 2030 560"
 ```
 
+### Using JSON-LD
+
+```liquid
+{% jsonLdScript meta, type, tags %}
+```
+
+`type` is a String that can be "page", "post", or "product". Anything else will be silently ignored. Default is "page"
+`tags` is an Array[String]. It only has an effect on the "post" type. Otherwise it'll be ignored.
+
+The generated JSON LD will try to render:
+- organization
+- breadcrumbs
+- website
+- faq
+
+Depending on `type` it'll also render a "page", "post", or "product".
+
+
 
 ## Thank You
 

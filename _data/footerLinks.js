@@ -17,11 +17,11 @@ module.exports = [
 			},
 			{
 				title: "Parents form",
-				url: "/parent-form",
+				url: "/apply/parents/",
 			},
 			{
 				title: "School/liaison form",
-				url: "/liaison-form",
+				url: "/apply/liaisons/",
 			},
 		]
 	},

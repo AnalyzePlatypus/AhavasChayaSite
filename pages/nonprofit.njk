@@ -1,5 +1,26 @@
----
-permalink: "/nonprofit/"
+---json
+{
+	"pageTitle": "Nonprofit Status",
+	"pageDescription": "Ahavas Chaya is a registered 503(c)3 nonprofit in the United States. Learn more about our nonprofit status.",
+	"permalink": "/nonprofit/",
+	"meta": {
+		"title": "Nonprofit Status",
+		"description": "Ahavas Chaya is a registered 503(c)3 nonprofit in the United States. Learn more about our nonprofit status.",
+		"url": "/nonprofit/",
+		"breadcrumbs": [
+			{
+				"name": "Home",
+				"url": "/",
+				"position": 1
+			},
+			{
+				"name": "Nonprofit Status",
+				"url": "/nonprofit",
+				"position": 2
+			}
+		]
+	}
+}
 ---
 
 {% extends "_includes/default.njk" %}
@@ -24,7 +45,7 @@ permalink: "/nonprofit/"
 		}
 	},
 	content: {
-		css: 'article'
+		css: ''
 	}
 } 
 %}
@@ -32,22 +53,22 @@ permalink: "/nonprofit/"
 	 
 	 <p>Ahavas Chaya is a IRS-registered nonprofit in the state of New York.</p>
 	 	
-		<p class='block flex gap-1'>
+		<p class='flex gap-1'>
 		{{ '/phosphor-icons/fill/check-circle-fill.svg' | svgContents("icon-lg fill-emerald-500") | safe }}
 		Registered 501(c)(3) nonprofit
 		</p>
 		
-		<p class='block flex gap-1'>
+		<p class='flex gap-1'>
 		{{ '/phosphor-icons/fill/check-circle-fill.svg' | svgContents("icon-lg fill-emerald-500") | safe }}
 		All donations are tax deductibile
 		</p>
 		
-		<p class='block flex gap-1'>
+		<p class='flex gap-1'>
 		{{ '/phosphor-icons/fill/check-circle-fill.svg' | svgContents("icon-lg fill-emerald-500") | safe }}
 		Maaser money can be used
 		</p>
 	
-		<p class='block flex gap-1'>
+		<p class='flex gap-1'>
 		{{ '/phosphor-icons/fill/info-fill.svg' | svgContents("icon-lg fill-sky-500") | safe }}
 		IRS EIN: 86-3024529</p>
 	 
@@ -70,13 +91,7 @@ permalink: "/nonprofit/"
 			{% endlink %}
 		</p>
 		
-		<a href='/contact' class='bg-gradient-to-br from-slate-700 to-slate-900 rounded-sm p-8 flex flex-col items-center mt-8 section-theme-dark'>
-			<h2 class='h2'>Got questions?</h2>
-			<p>We're happy to help!</p>
-			<button type='button' class='button primary medium'>
-			Contact us
-			</button>
-		</a>
+		{%- include "components/wrapups/contact-wrapup.njk" -%} 
 		 
 	{% endsection %}
 {% endblock %}

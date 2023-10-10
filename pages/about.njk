@@ -1,5 +1,26 @@
----
-permalink: "/about/"
+---json
+{
+	"pageTitle": "About Us",
+	"pageDescription": "Learn more about the Ahavas Chaya mission - funding therapy for single-parent kids",
+	"permalink": "/about/",
+	"meta": {
+		"title": "About Us",
+		"description": "Learn more about the Ahavas Chaya mission - funding therapy for single-parent kids",
+		"url": "/about/",
+		"breadcrumbs": [
+			{
+				"name": "Home",
+				"url": "/",
+				"position": 1
+			},
+			{
+				"name": "About",
+				"url": "/about",
+				"position": 2
+			}
+		]
+	}
+}
 ---
 
 {% extends "_includes/default.njk" %}
@@ -25,7 +46,7 @@ permalink: "/about/"
 		}
 	},
 	content: {
-		css: ''
+		css: 'max-w-4xl'
 	}
 } 
 %}
