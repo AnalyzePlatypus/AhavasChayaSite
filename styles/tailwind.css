@@ -315,7 +315,7 @@ main {
   --body-text-color: var(--theme--text-level-7);
   --eyebrow-text-color: var(--theme--text-level-5);
   
- --button--text-color--primary: theme(colors.black);
+ --button--text-color--primary: theme(colors.blue.600);
  --button--border-color--primary: theme(colors.white);
  --button--background-color--primary: theme(colors.white);
  
@@ -446,7 +446,7 @@ li a, {
 }
 
 figure:has(.blockquote) {
-  @apply bg-slate-100 rounded-sm p-6 mb-6;
+  @apply bg-slate-100 rounded-lg p-6 mb-6;
 }
 
 .blockquote {
