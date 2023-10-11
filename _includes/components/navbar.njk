@@ -4,7 +4,7 @@ x-init="$watch('expanded', (isOpening) => {
 	isOpening ? bodyScrollLock.disableBodyScroll($root) : bodyScrollLock.clearAllBodyScrollLocks()
 })"
 @click.outside='expanded = false'
-class=' pr-2 sm:px-6 sm:py-5 bg-white bg-opacity-80 		backdrop-blur-xl z-20 {% if settings.header.sticky %} sticky top-0 {% endif%}' >
+class=' pr-2 sm:px-6 sm:py-5 bg-white bg-opacity-80 		backdrop-blur-xl z-20 {% if settings.header.sticky and not disableNavbarSticky %} sticky top-0 {% endif%}' >
 
 	<div class='relative flex justify-between items-center w-full md:max-w-5xl md:mx-auto md:px-6'>
 		<button
