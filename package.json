@@ -9,6 +9,7 @@
     "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
     "@alpinejs/collapse": "^3.10.5",
     "@alpinejs/focus": "^3.10.5",
+    "@hotwired/turbo": "^7.3.0",
     "@quasibit/eleventy-plugin-schema": "^1.10.0",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "alpinejs": "^3.7.0",

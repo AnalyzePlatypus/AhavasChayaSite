@@ -527,3 +527,8 @@ picture img {
 .application-card h2 {
   @apply font-bold;
 }
+
+.turbo-progress-bar {
+  height: 5px;
+  @apply bg-blue-400;
+}
