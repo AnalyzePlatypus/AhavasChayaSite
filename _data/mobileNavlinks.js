@@ -10,6 +10,11 @@ module.exports = [
 		"cssClasses": ""
 	},
 	{
+		"label": "How Funding Works",
+		"url": "/how-funding-works",
+		"cssClasses": ""
+	},
+	{
 		"label": "FAQ",
 		"url": "/#faq",
 		"cssClasses": ""

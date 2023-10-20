@@ -50,76 +50,6 @@ main {
   isolation: isolate;
 }
 
-.icon-10xl {
-  height: 8rem;
-  min-width: 8rem;
-}
-
-.icon-9xl {
-  height: 7rem;
-  min-width: 7 rem;
-}
-
-.icon-8xl {
-  height: 6rem;
-  min-width: 6rem;
-}
-
-.icon-7xl {
-  height: 5rem;
-  min-width: 5rem;
-}
-
-.icon-6xl {
-  height: 4.5rem;
-  min-width: 4.5rem;
-}
-
-.icon-5xl {
-  height: 3.25rem;
-  min-width: 3.25rem;
-}
-
-.icon-4xl {
-  height: 2.75rem;
-  min-width: 2.75rem;
-}
-
-.icon-3xl {
-  height: 2.25rem;
-  min-width: 2.25rem;
-}
-
-.icon-2xl {
-  height: 2rem;
-  min-width: 2rem;
-}
-
-.icon-xl {
-  height: 1.75rem;
-  min-width: 1.75rem;
-}
-
-.icon-lg {
-  height: 1.7rem;
-  min-width: 1.7rem;
-}
-
-.icon-md {
-  height: 1.5rem;
-  min-width: 1.5rem;
-}
-
-.icon-sm {
-  height: 1.2rem;
-  min-width: 1.2rem;
-}
-
-.icon-xs {
-  height: 1rem;
-  min-width: 1rem;
-}
-
 .background-pulse {
   --gradient-ends: theme(colors.slate.300);
   --gradient-middle: theme(colors.slate.400);
@@ -143,6 +73,77 @@ main {
 }
 
 @layer components {
+  
+  .icon-10xl {
+    height: 8rem;
+    min-width: 8rem;
+  }
+  
+  .icon-9xl {
+    height: 7rem;
+    min-width: 7 rem;
+  }
+  
+  .icon-8xl {
+    height: 6rem;
+    min-width: 6rem;
+  }
+  
+  .icon-7xl {
+    height: 5rem;
+    min-width: 5rem;
+  }
+  
+  .icon-6xl {
+    height: 4.5rem;
+    min-width: 4.5rem;
+  }
+  
+  .icon-5xl {
+    height: 3.25rem;
+    min-width: 3.25rem;
+  }
+  
+  .icon-4xl {
+    height: 2.75rem;
+    min-width: 2.75rem;
+  }
+  
+  .icon-3xl {
+    height: 2.25rem;
+    min-width: 2.25rem;
+  }
+  
+  .icon-2xl {
+    height: 2rem;
+    min-width: 2rem;
+  }
+  
+  .icon-xl {
+    height: 1.75rem;
+    min-width: 1.75rem;
+  }
+  
+  .icon-lg {
+    height: 1.7rem;
+    min-width: 1.7rem;
+  }
+  
+  .icon-md {
+    height: 1.5rem;
+    min-width: 1.5rem;
+  }
+  
+  .icon-sm {
+    height: 1.2rem;
+    min-width: 1.2rem;
+  }
+  
+  .icon-xs {
+    height: 1rem;
+    min-width: 1rem;
+  }
+
 
   .button {
     @apply inline-block relative rounded-full border-2 border-transparent font-semibold cursor-pointer disabled:opacity-30 disabled:cursor-default tracking-wide no-underline shadow-sm transition-all;
@@ -273,8 +274,9 @@ main {
   --display-text-color: var(--theme--text-level-1);
   --heading-text-color: var(--theme--text-level-2);
   --lead-text-color: var(--theme--text-level-3);
-  --body-text-color: var(--theme--text-level-4);
+  --body-text-color: var(--theme--text-level-3);
   --eyebrow-text-color: var(--theme--text-level-5);
+  --link-hover-color: theme(colors.blue.500);
   
   --button--text-color--primary: theme(colors.white);
   --button--background-color--primary: theme(colors.blue.500);
@@ -312,8 +314,9 @@ main {
   --display-text-color: var(--theme--text-level-9);
   --heading-text-color: var(--theme--text-level-9);
   --lead-text-color: var(--theme--text-level-8);
-  --body-text-color: var(--theme--text-level-7);
+  --body-text-color: var(--theme--text-level-8);
   --eyebrow-text-color: var(--theme--text-level-5);
+  --link-hover-color: theme(colors.white);
   
  --button--text-color--primary: theme(colors.blue.600);
  --button--border-color--primary: theme(colors.white);
@@ -393,7 +396,7 @@ main {
 
 .autoformat-markdown h3,
 .h3 {
-  @apply text-xl;
+  @apply text-lg sm:text-xl;
 }
 
 .autoformat-markdown h4,
@@ -441,8 +444,15 @@ p {
 table a,
 p a,
 li a, {
-  @apply font-semibold underline decoration-2 underline-offset-2 decoration-blue-400 hover:text-blue-500 transition-all;
+  @apply font-semibold underline decoration-2 underline-offset-2 decoration-blue-400 transition-all;
   color: var(--theme--text-level-3);
+}
+
+table a:hover,
+p a:hover,
+li a:hover {
+  color: var(--link-hover-color);
+  text-decoration-color: var(--link-hover-color);
 }
 
 figure:has(.blockquote) {
@@ -516,7 +526,7 @@ picture img {
 }
 
 .article p {
-  @apply block text-base sm:text-lg mb-2;
+  @apply block text-base sm:text-lg mb-4;
   max-width: 60ch;
 }
 
@@ -530,5 +540,21 @@ picture img {
 
 .turbo-progress-bar {
   height: 5px;
-  @apply bg-blue-400;
+  @apply bg-blue-500;
+}
+
+
+.how-it-works--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+@media screen and (max-width: 639px) {
+  .how-it-works--grid {
+    @apply grid-cols-1;
+  }
+}
+
+.how-it-works--grid-item .body p {
+  @apply text-sm sm:text-base;
 }

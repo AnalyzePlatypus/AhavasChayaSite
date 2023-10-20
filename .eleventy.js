@@ -81,8 +81,8 @@ module.exports = function (eleventyConfig) {
     
     "./node_modules/rellax/rellax.min.js": './js/rellax.min.js',
     // 
-    // './node_modules/aos/dist/aos.js': './js/aos.js',
-    // './node_modules/aos/dist/aos.css': './aos.css',
+    './node_modules/aos/dist/aos.js': './js/aos.js',
+    './node_modules/aos/dist/aos.css': './aos.css',
     // 
     // './node_modules/@glidejs/glide/dist/glide.min.js': './js/glide.min.js',
     // './node_modules/@glidejs/glide/dist/css/glide.core.min.css': './glide.core.min.css',

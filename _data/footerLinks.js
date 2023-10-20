@@ -8,6 +8,10 @@ module.exports = [
 				url: "/eligibility",
 			},
 			{
+				title: "How Funding Works",
+				url: "/how-funding-works",
+			},
+			{
 				title: "FAQ",
 				url: "/#faq",
 			},

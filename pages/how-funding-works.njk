@@ -1,13 +1,13 @@
 ---json
 {
-	"pageTitle": "About Us",
-	"pageDescription": "Learn more about the Ahavas Chaya mission - funding therapy for single-parent kids",
-	"permalink": "/about/",
+	"pageTitle": "How funding works",
+	"pageDescription": "Learn about Ahavas Chaya funding",
+	"permalink": "/how-funding-works/",
 	"type": "post",
 	"meta": {
-		"title": "About Us",
-		"description": "Learn more about the Ahavas Chaya mission - funding therapy for single-parent kids",
-		"url": "/about/",
+		"title": "How funding works",
+		"description": "Learn about Ahavas Chaya funding",
+		"url": "/donate/",
 		"breadcrumbs": [
 			{
 				"name": "Home",
@@ -15,8 +15,8 @@
 				"position": 1
 			},
 			{
-				"name": "About",
-				"url": "/about",
+				"name": "How funding works",
+				"url": "/how-funding-works",
 				"position": 2
 			}
 		]
@@ -24,14 +24,15 @@
 }
 ---
 
-{% extends "_includes/default.njk" %}
 {%- from '_includes/components/macros/page-header.njk' import pageHeader %}
+
+{% extends "_includes/default.njk" %}
 
 {% block content %}
 {% section { 
-	id: 'about-main',
+	id: 'funding-main',
 	background: { 
-		css: '',
+		css: 'py-0',
 		image: {
 			enabled: false,
 			url: '/images/backgrounds/white-abstract-2.jpg',
@@ -47,27 +48,26 @@
 		}
 	},
 	content: {
-		css: 'max-w-4xl pb-12'
+		css: 'pb-12'
 	}
 } 
 %}
-	 
-	 
-	 
-	 <div class='article'>
-	 	
+
+	<div class='article autoformat-markdown'>
+		 
 		 {{ 
 				pageHeader({ 
-					title: "About", 
-					subtitle: "Learn more about Ahavas Chaya" 
+					title: "How Funding Works", 
+					subtitle: "Learn about Ahavas Chaya funding" 
 			 }) 
 		 }}
 	 
-	  {% markdown %}
-			{%- include "../copy/about.md" -%}
+		{% markdown %}
+			{%- include "../copy/funding.md" -%}
 		{% endmarkdown %}
 	 </div>
 	 
 	 {%- include "components/wrapups/contact-wrapup.njk" -%} 
+
 	{% endsection %}
 {% endblock %}

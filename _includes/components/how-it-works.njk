@@ -1,0 +1,49 @@
+{% section { 
+	id: 'faq',
+	background: { 
+		css: 'sm:pt-12 pb-8 sm:pb-20 bg-gradient-to-t from-blue-700 to-blue-500',
+		image: {
+			enabled: false,
+			url: '/images/backgrounds/white-abstract-2.jpg',
+			alt: 'Hexagons on a light background', 
+			opacity: 0.5,
+			css: 'object-cover scale-110',
+			attributes: 'rellax data-rellax-speed="-1"'
+		},
+		overlay: {
+			enabled: false,
+			css: 'bg-white',
+			opacity: 0.85
+		}
+	},
+	content: {
+		css: 'section-theme-dark'
+	}
+} 
+%}
+
+<h2 class='display-2'>How it works<h2>
+
+<div class='grid how-it-works--grid gap-x-3 gap-y-8 sm:gap-y-3 sm:gap-6 justify-between items-start mt-8 sm:mt-16'>
+{% for segment in howItWorksSegments %}
+	<div class='how-it-works--grid-item flex sm:flex-col max-w-sm'  data-aos="fade-up" data-aos-delay="{{ loop.index * 100}}" data-aos-once="false">
+		
+		<div class='bg-white bg-opacity-10 p-2 rounded-full w-min h-min mb-6 mr-4 sm:mr-0 shadow-md shadow-blue-600'>
+		{{ ('/phosphor-icons/regular/' + segment.icon + ".svg") | svgContents("icon-lg sm:icon-3xl fill-blue-50") | safe }}
+		</div>
+	
+		<div>
+		<h3 class='h3 '>
+			<span class='font-bold'>{{ loop.index }}.</span>
+			{{ segment.title }}
+		</h3>
+		<div class='body sm:mt-2'>
+		{{ segment.bodyHtml | safe }}
+		</div>
+		</div>
+	</div>
+{% endfor %}
+
+</div>
+
+{% endsection %}

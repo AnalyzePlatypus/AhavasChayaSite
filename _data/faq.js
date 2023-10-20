@@ -1,17 +1,17 @@
 module.exports = [
 	{
-		"question": "Who's Eligible for Ahavas Chaya Funding?",
+		"question": "Who's eligible for Ahavas Chaya funding?",
 		"answer": `Ahavas Chaya generally provides funding when all the below conditions are met:
 		<ul>
-		<li>The individual is an orphan or from a single parent home.</li>
-		<li>The individual is under the age of 22. </li>
-		<li>All other funding options have been explored.</li>
+		<li>The individual is an orphan or from a single parent home</li>
+		<li>The individual is under the age of 22</li>
+		<li>All other funding options have been explored</li>
 		</ul>
-		For full rules, see our <a href='/eligibility'>eligibility page</a>.`
+		For full rules, see our <a href='/eligibility'>eligibility page ›</a>.`
 	},
 	{
 		"question": "What mental health services do you fund?",
-		"answer": "We fund any licensed mental health professionals as long as you meet our eligibility requirements."
+		"answer": "We fund any licensed mental health professionals as long as you meet our <a href='/eligibility'>eligibility requirements</a>."
 	},
 	{
 		"question": "Will you find a professional for my child? ",
@@ -19,7 +19,11 @@ module.exports = [
 	},
 	{
 		"question": "How does funding work?",
-		"answer": "Ahavas Chaya covers 75% of therapist costs and the family covers the remaining 25%. "
+		"answer": `
+			Ahavas Chaya covers 75% of therapist costs and the family covers the remaining 25%. 
+			<br/>
+			<a href='/how-funding-works'>Learn more about funding ›</a>.
+		`
 	},
 	{
 		"question": "I have another question",
