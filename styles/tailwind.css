@@ -445,7 +445,7 @@ table a,
 p a,
 li a, {
   @apply font-semibold underline decoration-2 underline-offset-2 decoration-blue-400 transition-all;
-  color: var(--theme--text-level-3);
+  color: var(--body-text-color);
 }
 
 table a:hover,
