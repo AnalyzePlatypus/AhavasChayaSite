@@ -19,6 +19,8 @@
   --theme-light--color--text-level-10:  theme(colors.slate.50);
 }
 
+
+
 .theme--light {
   --theme--text-level-1: var(--theme-light--color--text-level-1);
   --theme--text-level-2: var(--theme-light--color--text-level-2);
@@ -558,3 +560,5 @@ picture img {
 .how-it-works--grid-item .body p {
   @apply text-sm sm:text-base;
 }
+
+
