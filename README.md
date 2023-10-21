@@ -147,6 +147,12 @@ To add a [canonical URL](https://developers.google.com/search/docs/crawling-inde
 	{% image {src: partner.imagePath, alt: partner.imageDescription, widths: [600, 320, 300, 160], cssSizes: '(max-width: 639px) 160px, 300px', cssClass: ''} %}
 ```
 
+### Rellax: Parallax
+
+```
+rellax data-rellax-speed='-1' data-rellax-desktop-speed='-3'
+```
+
 ### Other
 
 ## Logo SVG Viewbox

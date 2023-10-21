@@ -536,6 +536,11 @@ picture img {
   @apply p-6 border-2 border-black rounded-lg shadow-md hover:shadow-lg transition-all w-full;
 }
 
+
+.application-card.card-blue {
+  @apply border-blue-500 shadow-blue-500/30;
+}
+
 .application-card h2 {
   @apply font-bold;
 }

@@ -18,6 +18,7 @@
 		"label": "Donate",
 		"shortLabel": "Donate",
 		"url": "/donate",
-		"cssClasses": "sm:block button primary small sm:medium"
+		"cssClasses": "sm:block button primary small sm:medium",
+		"fathomClickId": "AGM41YRA"
 	}
 ]

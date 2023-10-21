@@ -1,7 +1,17 @@
- <a href='/contact' class='bg-gradient-to-br from-blue-500 to-blue-600 rounded-md py-16 flex flex-col items-center mt-8 section-theme-dark w-full shadow-2xl shadow-blue-400/30 transition-all hover:brightness-120 max-sm:rounded-none'>
-	 <h2 class='h1 text-center'>Got questions?</h2>
-	 <p class='text-center'>We're happy to help!</p>
-	 <button type='button' class='button primary medium'>
-	 Contact us
-	 </button>
+ <a href='/contact' class='bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl py-16 flex flex-col items-center mt-8 section-theme-dark w-full shadow-2xl shadow-blue-400/30 transition-all hover:brightness-120 max-sm:rounded-none relative overflow-hidden'>
+ 	 <div class='z-10 flex flex-col'>
+	 		<h2 class='h1 text-center'>Got questions?</h2>
+	 		<p class='text-center'>We're happy to help!</p>
+	 		<button type='button' class='button primary medium'>
+	 		Contact us
+	 		</button>
+	 </div>
+	 
+	 
+	 <div class="absolute z-0 opacity-10 scale-[2.6] sm:scale-[3] -translate-x-16 sm:-translate-x-8 pointer-events-none" 
+	 >
+	 	<div rellax data-rellax-speed='-0.1'>
+	 	{{ '/images/backgrounds/Background Heart.svg' | svgContents('') | safe }} 
+		 </div>
+	 </div>
  </a>
