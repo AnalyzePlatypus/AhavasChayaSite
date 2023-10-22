@@ -1,0 +1,69 @@
+---json
+{
+	"pageTitle": "Terms & Conditions",
+	"pageDescription": "Learn about the Ahavas Chaya Site terms & conditions.",
+	"permalink": "/terms/",
+	"autoformatMarkdownDocument": true,
+	"type": "post",
+	"meta": {
+		"title": "Terms & Conditions",
+		"description": "Learn about the Ahavas Chaya Site terms & conditions.",
+		"url": "/terms/",
+		"breadcrumbs": [
+			{
+				"name": "Home",
+				"url": "/",
+				"position": 1
+			},
+			{
+				"name": "Terms & Conditions",
+				"url": "/terms",
+				"position": 2
+			}
+		]
+	}
+}
+---
+
+
+{% extends "_includes/default.njk" %}
+{%- from '_includes/components/macros/page-header.njk' import pageHeader %}
+
+{% block content %}
+{% section { 
+	id: 'about-main',
+	background: { 
+		css: 'py-0',
+		image: {
+		},
+		overlay: {
+		}
+	},
+	content: {
+		css: 'pb-12'
+	}
+} 
+%}
+	 
+	 
+	 
+	 <div class='article'>
+	 
+		{{ 
+			 pageHeader({ 
+				 title: "Terms & Conditions", 
+				 subtitle: "Updated October 22, 2023" 
+			}) 
+		}}
+		
+		{% markdown %}
+			{%- include "../copy/terms.md" -%}
+		{% endmarkdown %}
+	 <div>
+	 
+	{%- include "components/wrapups/contact-wrapup.njk" -%} 
+	
+	{% endsection %}
+	
+	
+{% endblock %}

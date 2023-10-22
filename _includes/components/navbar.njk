@@ -27,7 +27,7 @@ class=' pr-2 sm:px-6 sm:py-5 bg-white bg-opacity-80 		backdrop-blur-xl z-20 {% i
 		<a>
 		
 		{% for link in navlinks %}
-			<a href='{{ link.url }}' class='{{ link.cssClasses }} hover:underline py-3 px-6 text-sm'>
+			<a href='{{ link.url }}' class='{{ link.cssClasses }} hover:underline hover:decoration-2 hover:decoration-blue-400 underline-offset-2 py-3 px-6 text-sm'>
 				{{ link.label }}
 			</a>
 		{% endfor %}
