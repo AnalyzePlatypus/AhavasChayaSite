@@ -3,7 +3,7 @@ module.exports = {
 		sticky: true
 	},
 	announcementBar: {
-		enabled: true,
+		enabled: false,
 		highlightedText: '🎉 Hey, welcome!',
 		regularText: 'Explore our brand new site!',
 		url: "#",

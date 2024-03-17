@@ -2,7 +2,7 @@ We are Ahavas Chaya, Inc ("Company," "we," "us," "our"), a company registered in
 
 We operate the website ahavaschaya.com (the "Site"), as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").
 
-You can contact us by phone at [+1 (917) 626-0494](tel:+19176260494), email at [info@ahavaschaya.com](mailto:info@ahavaschaya.com), or by mail to 3512 Quentin Road, Suite LL100-2, Brooklyn, NY 11234, United States.
+You can contact us by phone at [+1 (347) 588-9117](tel:+13475889117), email at [info@ahavaschaya.com](mailto:info@ahavaschaya.com), or by mail to 3512 Quentin Road, Suite LL100-2, Brooklyn, NY 11234, United States.
 
 These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Ahavas Chaya, Inc, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
 
@@ -234,7 +234,7 @@ Ahavas Chaya, Inc
 3512 Quentin Road, Suite LL100-2
 Brooklyn, NY 11234
 United States
-Phone: [+1 (917) 626-0494](tel:+19176260494)
+Phone: [+1 (347) 588-9117](tel:+13475889117)
 [info@ahavaschaya.com](mailto:info@ahavaschaya.com)
 
 These terms of use were created using [Termly's Terms and Conditions Generator](https://termly.io/products/terms-and-conditions-generator/).
