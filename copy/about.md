@@ -1,6 +1,6 @@
 Ahavas Chaya was founded with the intention of furthering mental health awareness across Jewish communities. 
 
-Our primary focus is to provide financial assistance for therapy to children living in single-parent homes. Many children living in these circumstances don’t have the resources or funding to access the proper help. 
+Our primary focus is to provide financial assistance for therapy to orphaned children. Many children living in these circumstances don’t have the resources or funding to access the proper help.
 
 Ahavas Chaya works together with educational Institutions and various organizations to identify these children and help guide them towards the proper professionals. 
 

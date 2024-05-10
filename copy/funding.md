@@ -1,6 +1,6 @@
 ## How funding works
 
-Upon approval, the parent(s) will be responsible for a percentage of the provider's fee. This percentage will be determined upon approval of this application.
+Upon approval, the parent or guardian will be responsible for a percentage of the provider's fee. This percentage will be determined upon approval of this application.
 
 Ahavas Chaya generally covers 75% of the cost.
 Ahavas Chaya does not pay the provider until the family has paid its pre-arranged share.

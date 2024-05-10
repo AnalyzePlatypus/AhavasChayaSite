@@ -3,7 +3,7 @@ module.exports = [
 		"question": "Who's eligible for Ahavas Chaya funding?",
 		"answer": `Ahavas Chaya generally provides funding when all the below conditions are met:
 		<ul>
-		<li>The individual is an orphan or from a single parent home</li>
+		<li>The individual is an orphan</li>
 		<li>The individual is under the age of 22</li>
 		<li>All other funding options have been explored</li>
 		</ul>

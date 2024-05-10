@@ -4,7 +4,7 @@ module.exports = [
 		title: "Check eligibility",
 		bodyHtml: `
 		 <p>Review our <a href='/eligibility'>eligibility guidelines</a>.</p>
-		 <p>We primarily service children living in single-parent homes.</p>
+		 <p>We focus on servicing orphaned children.</p>
 		`
 	},
 	{
@@ -12,7 +12,7 @@ module.exports = [
 		title: "Apply Online",
 		bodyHtml: `
 		 <p>Fill out our <a href='/apply'>online applications</a>.</p> 
-		 <p>The parent(s) <strong>and</strong> the school (or other family liaison) should each fill out and submit the <a href='/apply'>required forms</a>.</p>
+		 <p>The parent or guardian <strong>and</strong> the school (or other family liaison) should each fill out and submit the <a href='/apply'>required forms</a>.</p>
 		`
 	},
 	{
